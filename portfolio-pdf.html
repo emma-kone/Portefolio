@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma Dev - Portfolio PDF</title>
+    <link rel="stylesheet" href="portfolio-pdf.css">
+    <!-- Font Awesome pour les icônes pro -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="pdf-container" id="pdf-content">
+        <!-- Header -->
+        <div class="pdf-header">
+            <div class="header-content">
+                <h1 class="pdf-title">EMMA DEV</h1>
+                <p class="pdf-subtitle">Développeuse Web & Designer Graphique</p>
+                <div class="pdf-contact">
+                    <span><i class="fa-regular fa-envelope"></i> kignelemma@gmail.com</span>
+                    <span><i class="fa-solid fa-phone"></i> +225 07 13 777 318</span>
+                    <span><i class="fa-regular fa-map"></i> Abidjan, Côte d'Ivoire</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="pdf-section">
+            <h2 class="pdf-section-title">
+                <i class="fa-regular fa-user"></i> À PROPOS
+            </h2>
+            <p class="pdf-text">
+                Jeune développeuse web passionnée et designer créative de 21 ans. Je combine le code et le 
+                design pour créer des expériences numériques uniques. L'innovation est mon moteur et chaque 
+                projet est une nouvelle aventure.
+            </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="pdf-section">
+            <h2 class="pdf-section-title">
+                <i class="fa-regular fa-code"></i> COMPÉTENCES TECHNIQUES
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Développement</h3>
+                    <ul class="skill-list">
+                        <li><i class="fa-brands fa-html5"></i> HTML5 / CSS3 - 90%</li>
+                        <li><i class="fa-brands fa-js"></i> TypeScript - 60%</li>
+                        <li><i class="fa-brands fa-dart"></i> Dart & Flutter - 45%</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Design</h3>
+                    <ul class="skill-list">
+                        <li><i class="fa-regular fa-pen-to-square"></i> UI/UX Design - 85%</li>
+                        <li><i class="fa-regular fa-object-group"></i> Identité Visuelle - 80%</li>
+                        <li><i class="fa-brands fa-figma"></i> Figma</li>
+                        <li><i class="fa-regular fa-images"></i> Adobe Suite</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Outils</h3>
+                    <ul class="skill-list">
+                        <li><i class="fa-regular fa-terminal"></i> VS Code</li>
+                        <li><i class="fa-brands fa-git-alt"></i> Git</li>
+                        <li><i class="fa-regular fa-note-sticky"></i> Notion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="pdf-section">
+            <h2 class="pdf-section-title">
+                <i class="fa-regular fa-folder-open"></i> PROJETS RÉCENTS
+            </h2>
+            <div class="projects-pdf">
+                <div class="project-item">
+                    <h3 class="project-title">KOUMASSI IMMO</h3>
+                    <p class="project-desc">Plateforme de recherche immobilière avec carte interactive et filtres avancés</p>
+                    <p class="project-tech"><i class="fa-brands fa-vuejs"></i> Vue.js | UI Design</p>
+                </div>
+                <div class="project-item">
+                    <h3 class="project-title">TASKFLOW PRO</h3>
+                    <p class="project-desc">Application de productivité cross-platform pour équipes distantes</p>
+                    <p class="project-tech"><i class="fa-brands fa-flutter"></i> Flutter | Cloud</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Gallery -->
+        <div class="pdf-section">
+            <h2 class="pdf-section-title">
+                <i class="fa-regular fa-palette"></i> CRÉATIONS DESIGN
+            </h2>
+            <div class="design-grid">
+                <div class="design-item">
+                    <i class="fa-regular fa-image"></i>
+                    <p class="design-name">SOIRÉE JAZZ - Affiche</p>
+                </div>
+                <div class="design-item">
+                    <i class="fa-regular fa-bolt"></i>
+                    <p class="design-name">ECO LIFE - Branding</p>
+                </div>
+                <div class="design-item">
+                    <i class="fa-regular fa-shapes"></i>
+                    <p class="design-name">ABSTRAIT 01 - Art</p>
+                </div>
+                <div class="design-item">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="design-name">MARIAGE - Print</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formation -->
+        <div class="pdf-section">
+            <h2 class="pdf-section-title">
+                <i class="fa-regular fa-graduation-cap"></i> FORMATION
+            </h2>
+            <p class="pdf-text">Développement Web & Design Graphique - Formation Continue</p>
+        </div>
+
+        <!-- Disponibilité -->
+        <div class="pdf-section">
+            <h2 class="pdf-section-title">
+                <i class="fa-regular fa-calendar"></i> DISPONIBILITÉ
+            </h2>
+            <p class="pdf-text">
+                <i class="fa-regular fa-circle-check" style="color: #22c55e;"></i> 
+                Disponible pour des missions freelance et collaborations
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="pdf-footer">
+            <p><i class="fa-regular fa-copyright"></i> 2024 Emma Dev - Portfolio professionnel</p>
+            <p class="pdf-footer-small">Plus d'informations sur emma-dev.com</p>
+        </div>
+    </div>
+
+    <div class="download-btn-container">
+        <button onclick="downloadPDF()" class="download-btn">
+            <i class="fa-regular fa-file-pdf"></i>
+            <span>Télécharger le portfolio (PDF)</span>
+        </button>
+        <a href="index.html" class="back-btn">
+            <i class="fa-regular fa-arrow-left"></i>
+            Retour au site
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('pdf-content');
+            const opt = {
+                margin:       1,
+                filename:     'Emma-Dev-Portfolio.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, letterRendering: true },
+                jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            // Afficher une notification
+            const btn = document.querySelector('.download-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Génération du PDF...';
+            btn.disabled = true;
+            
+            // Générer le PDF
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.innerHTML = '<i class="fa-regular fa-circle-check"></i> PDF généré avec succès !';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
