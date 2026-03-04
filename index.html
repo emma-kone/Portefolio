@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Emma Dev - Portfolio</title>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -26,18 +26,37 @@
                 <span class="logo-text">EMMA <span class="text-blue">DEV.</span></span>
             </a>
 
+            <!-- Menu pour desktop -->
             <div class="nav-menu">
                 <a href="#home" class="nav-link">Accueil</a>
                 <a href="#about" class="nav-link">À propos</a>
                 <a href="#skills" class="nav-link">Compétences</a>
-                <a href="#experience" class="nav-link">Expérience</a> <!-- Nouveau lien -->
+                <a href="#experience" class="nav-link">Expérience</a>
                 <a href="#work" class="nav-link">Projets</a>
                 <a href="#design" class="nav-link">Design</a>
             </div>
 
-            <div class="flex items-center gap-8">
+            <!-- Menu mobile - Hamburger -->
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="flex items-center gap-8 desktop-only">
                 <a href="#contact" class="nav-button">Me contacter</a>
             </div>
+        </div>
+        
+        <!-- Menu mobile déroulant -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-nav-link">Accueil</a>
+            <a href="#about" class="mobile-nav-link">À propos</a>
+            <a href="#skills" class="mobile-nav-link">Compétences</a>
+            <a href="#experience" class="mobile-nav-link">Expérience</a>
+            <a href="#work" class="mobile-nav-link">Projets</a>
+            <a href="#design" class="mobile-nav-link">Design</a>
+            <a href="#contact" class="mobile-nav-button">Me contacter</a>
         </div>
     </nav>
 
@@ -68,6 +87,15 @@
                             Créative développeur &amp; designer basée à Abidjan. Je conçois des expériences numériques
                             immersives
                         </p>
+                        <div class="hero-buttons">
+                            <a href="#work" class="btn-primary">
+                                Voir mes projets
+                                <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
+                            </a>
+                            <a href="portfolio-pdf.html" class="btn-secondary">
+                                Voir le CV
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Photo Card -->
@@ -78,20 +106,10 @@
                         <div class="about-image-content">
                             <div class="about-image-line"></div>
                             <h3 class="about-image-title">MAQUETTE &amp; SITE WEB</h3>
-                            <p class="about-image-text">Créer des interfaces intutives et esthétique
+                            <p class="about-image-text">Créer des interfaces intuitives et esthétiques
                             </p>
                         </div>
                     </div>
-                </div>
-
-                <div class="hero-buttons">
-                    <a href="#work" class="btn-primary">
-                        Voir mes projets
-                        <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
-                    </a>
-                    <a href="portfolio-pdf.html" class="btn-secondary">
-                        Voir le CV
-                    </a>
                 </div>
             </div>
         </section>
@@ -105,8 +123,7 @@
             <div class="about-grid">
                 <!-- Photo Card -->
                 <div class="about-image-card">
-                    <img src="ma_photo.jpg"
-                        alt="Emma Dev working" class="about-image">
+                    <img src="ma_photo.jpg" alt="Emma Dev working" class="about-image">
                     <div class="about-image-overlay"></div>
                     <div class="about-image-content">
                         <div class="about-image-line"></div>
@@ -170,7 +187,7 @@
 
             <!-- Info Cards -->
             <div class="info-grid">
-                <div class="info-card col-span-1">
+                <div class="info-card">
                     <div class="h-full flex flex-col justify-between">
                         <div class="mb-4">
                             <div class="info-icon">
@@ -185,7 +202,7 @@
                     </div>
                 </div>
 
-                <div class="info-card col-span-2">
+                <div class="info-card info-card-large">
                     <div class="relative z-10">
                         <div class="info-icon">
                             <iconify-icon icon="solar:layers-minimalistic-linear" width="20"></iconify-icon>
@@ -196,14 +213,11 @@
                             <span class="info-tag">TypeScript</span>
                             <span class="info-tag">Dart</span>
                             <span class="info-tag highlight">Vue.Js</span>
-                            <!-- <span class="info-tag">Tailwind CSS</span>
-                            <span class="info-tag">Figma</span>
-                            <span class="info-tag">Adobe Suite</span> -->
                         </div>
                     </div>
                 </div>
 
-                <div class="info-card-special col-span-2">
+                <div class="info-card-special">
                     <div class="relative z-10 flex flex-col justify-between h-full min-h-[160px]">
                         <div>
                             <div class="flex items-center justify-between mb-4">
@@ -221,7 +235,7 @@
                     <div class="glow-effect"></div>
                 </div>
 
-                <div class="info-card col-span-1">
+                <div class="info-card">
                     <div class="h-full flex flex-col">
                         <div class="info-icon">
                             <iconify-icon icon="solar:share-linear" width="20"></iconify-icon>
@@ -250,7 +264,7 @@
 
             <div class="text-center mb-16">
                 <h2 class="section-title">
-                    EXPERIENCE <span class="text-blue">PROFESIONNEL</span>
+                    EXPERIENCE <span class="text-blue">PROFESSIONNELLE</span>
                 </h2>
                 <p class="section-subtitle">
                     Mon cheminement professionnel, du design au développement.
@@ -262,94 +276,21 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">
-                        <span class="timeline-badge">2024 - Présent</span>
+                        <span class="timeline-badge">2025 - Présent</span>
                     </div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3 class="timeline-title">Développeuse Web & Designer Freelance</h3>
-                            <p class="timeline-location">Indépendant · Abidjan</p>
+                            <h3 class="timeline-title">Stage en développement web full stack</h3>
+                            <p class="timeline-location">Ciacems · Abidjan</p>
                         </div>
                         <p class="timeline-description">
-                            Création de sites web modernes et responsive. Conception d'identités visuelles et supports
-                            de communication pour startups et PME locales.
+                            Création de sites web modernes et responsive.
                         </p>
                         <div class="timeline-tags">
                             <span class="timeline-tag">HTML/CSS</span>
-                            <span class="timeline-tag">UI Design</span>
-                            <span class="timeline-tag">Figma</span>
-                            <span class="timeline-tag">Adobe</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">
-                        <span class="timeline-badge">2023 - 2024</span>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Stage Développement Web</h3>
-                            <p class="timeline-location">TechLab Solutions · Abidjan</p>
-                        </div>
-                        <p class="timeline-description">
-                            Développement d'applications web avec Vue.js et Tailwind CSS. Intégration de maquettes et
-                            collaboration en équipe agile.
-                        </p>
-                        <div class="timeline-tags">
-                            <span class="timeline-tag">Vue.js</span>
-                            <span class="timeline-tag">Tailwind</span>
-                            <span class="timeline-tag">Git</span>
-                            <span class="timeline-tag">Figma</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">
-                        <span class="timeline-badge">2022 - 2023</span>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Designer Graphique Junior</h3>
-                            <p class="timeline-location">CréaStudio · Abidjan</p>
-                        </div>
-                        <p class="timeline-description">
-                            Création de supports print et digitaux : identités visuelles, logos, flyers, affiches pour
-                            divers clients.
-                        </p>
-                        <div class="timeline-tags">
-                            <span class="timeline-tag">Photoshop</span>
-                            <span class="timeline-tag">Illustrator</span>
-                            <span class="timeline-tag">InDesign</span>
-                            <span class="timeline-tag">Branding</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">
-                        <span class="timeline-badge">2021 - 2022</span>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Formation Autodidacte</h3>
-                            <p class="timeline-location">En ligne</p>
-                        </div>
-                        <p class="timeline-description">
-                            Formation intensive en développement web et design. Réalisation de projets personnels et
-                            constitution du portfolio.
-                        </p>
-                        <div class="timeline-tags">
-                            <span class="timeline-tag">HTML/CSS</span>
-                            <span class="timeline-tag">JavaScript</span>
-                            <span class="timeline-tag">UI/UX</span>
-                            <span class="timeline-tag">Figma</span>
+                            <span class="timeline-tag">Vue.Js</span>
+                            <span class="timeline-tag">TypeScript</span>
+                            <span class="timeline-tag">Dart</span>
                         </div>
                     </div>
                 </div>
@@ -361,16 +302,16 @@
             <!-- Statistiques complémentaires -->
             <div class="timeline-stats">
                 <div class="stat-item">
-                    <span class="stat-number">3+</span>
-                    <span class="stat-label">Années d'expérience</span>
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Mois d'expérience</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">15+</span>
+                    <span class="stat-number">3+</span>
                     <span class="stat-label">Projets réalisés</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">8+</span>
-                    <span class="stat-label">Clients satisfaits</span>
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">De motivation</span>
                 </div>
             </div>
         </section>
@@ -408,31 +349,31 @@
                                 <span class="skill-item-percent blue">90%</span>
                             </div>
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill blue width-90"></div>
+                                <div class="skill-progress-fill blue" style="width: 90%;"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-item-header">
-                                <div class="flex items-center gap-2">
+                                <div class="skill-item-name-wrapper">
                                     <span class="skill-item-name">TypeScript</span>
                                     <span class="learning-badge">En apprentissage</span>
                                 </div>
                                 <span class="skill-item-percent blue">10%</span>
                             </div>
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill blue width-60"></div>
+                                <div class="skill-progress-fill blue" style="width: 10%;"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-item-header">
-                                <div class="flex items-center gap-2">
+                                <div class="skill-item-name-wrapper">
                                     <span class="skill-item-name">Dart &amp; Flutter</span>
                                     <span class="learning-badge">En apprentissage</span>
                                 </div>
                                 <span class="skill-item-percent blue">10%</span>
                             </div>
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill blue width-45"></div>
+                                <div class="skill-progress-fill blue" style="width: 10%;"></div>
                             </div>
                         </div>
                     </div>
@@ -455,7 +396,7 @@
                                 <span class="skill-item-percent purple">85%</span>
                             </div>
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill purple width-85"></div>
+                                <div class="skill-progress-fill purple" style="width: 85%;"></div>
                             </div>
                         </div>
 
@@ -465,7 +406,7 @@
                                 <span class="skill-item-percent purple">80%</span>
                             </div>
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill purple width-80"></div>
+                                <div class="skill-progress-fill purple" style="width: 80%;"></div>
                             </div>
                         </div>
                     </div>
@@ -495,14 +436,6 @@
                                 class="tool-icon orange"></iconify-icon>
                             <span class="tool-name">Git</span>
                         </div>
-                        <!-- <div class="tool-item">
-                            <iconify-icon icon="solar:gallery-wide-linear" class="tool-icon pink"></iconify-icon>
-                            <span class="tool-name">Adobe</span>
-                        </div>
-                        <div class="tool-item">
-                            <iconify-icon icon="solar:notes-minimalistic-linear" class="tool-icon"></iconify-icon>
-                            <span class="tool-name">Notion</span>
-                        </div> -->
                         <div class="tool-item">
                             <iconify-icon icon="solar:palette-linear" class="tool-icon purple"></iconify-icon>
                             <span class="tool-name">Canva</span>
@@ -519,7 +452,7 @@
                     <div class="section-tag">
                         Portfolio
                     </div>
-                    <h2 class="text-5xl title-large text-white">
+                    <h2 class="projects-main-title">
                         PROJETS
                     </h2>
                 </div>
@@ -681,7 +614,7 @@
                 <div class="section-tag">
                     Créations
                 </div>
-                <h2 class="text-4xl title-large text-white">
+                <h2 class="gallery-main-title">
                     GALLERY DESIGN
                 </h2>
             </div>
@@ -842,12 +775,11 @@
         </div>
     </footer>
 
-    <!-- EmailJS avec vos identifiants CORRIGÉS -->
+    <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         (function () {
             try {
-                // Initialisation de EmailJS avec votre clé publique
                 emailjs.init("Bg4Q9kp-0or9c653h");
                 console.log("✅ EmailJS initialisé avec succès");
             } catch (error) {
@@ -857,19 +789,16 @@
 
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault();
-            console.log("📝 Formulaire soumis");
 
             const submitBtn = document.getElementById('submitBtn');
             const btnText = document.getElementById('btnText');
             const btnIcon = document.getElementById('btnIcon');
             const formStatus = document.getElementById('formStatus');
 
-            // Récupérer les données du formulaire
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
-            // Validation
             if (!name || !email || !message) {
                 formStatus.innerHTML = `
                 <div class="error-message">
@@ -880,50 +809,34 @@
                 return;
             }
 
-            // Désactiver le bouton pendant l'envoi
             submitBtn.disabled = true;
             btnText.textContent = 'Envoi en cours...';
             btnIcon.className = 'fa-solid fa-spinner fa-spin text-lg';
             formStatus.innerHTML = '';
 
-            console.log("📤 Données du formulaire:", { name, email, message });
-
-            // SERVICE ID
             const serviceId = "service_rlknvs9";
+            const templateContact = "template_9npwbxe";
+            const templateAutoReply = "template_opz8etl";
 
-            // TEMPLATE IDS
-            const templateContact = "template_9npwbxe";  // Pour vous
-            const templateAutoReply = "template_opz8etl"; // Pour le client
-
-            // Paramètres pour le template Contact Us (pour vous)
             const contactParams = {
                 from_name: name,
                 from_email: email,
                 message: message,
-                to_email: 'kignelemma@gmail.com' // Votre email en dur pour être sûr
+                to_email: 'kignelemma@gmail.com'
             };
 
-            // Paramètres pour le template Auto-Reply (pour le client)
             const autoReplyParams = {
                 from_name: name,
-                from_email: email, // Important: c'est l'email du client
+                from_email: email,
                 message: message,
                 reply_to: 'kignelemma@gmail.com'
             };
 
-            console.log("🚀 Envoi des emails...");
-
-            // Envoyer d'abord l'email à vous, puis l'auto-reply au client
             emailjs.send(serviceId, templateContact, contactParams)
-                .then(function (response) {
-                    console.log("✅ Email de notification envoyé à vous-même:", response);
-
-                    // Maintenant envoyer l'auto-reply au client
+                .then(function () {
                     return emailjs.send(serviceId, templateAutoReply, autoReplyParams);
                 })
-                .then(function (response) {
-                    console.log("✅ Auto-reply envoyé au client:", response);
-
+                .then(function () {
                     formStatus.innerHTML = `
                     <div class="success-message">
                         <i class="fa-regular fa-circle-check"></i>
@@ -933,9 +846,6 @@
                     document.getElementById('contactForm').reset();
                 })
                 .catch(function (error) {
-                    console.error("❌ Erreur:", error);
-
-                    // Afficher l'erreur détaillée
                     let errorDetail = error.text || "Erreur inconnue";
                     formStatus.innerHTML = `
                     <div class="error-message">
@@ -945,76 +855,25 @@
                 `;
                 })
                 .finally(function () {
-                    // Réactiver le bouton
                     submitBtn.disabled = false;
                     btnText.textContent = 'Envoyer le message';
                     btnIcon.className = 'fa-regular fa-paper-plane text-lg';
                 });
         });
-    </script>
 
-    <!-- Style pour les messages de statut -->
-    <style>
-        .form-status {
-            margin-top: 1rem;
-            text-align: center;
-        }
+        // Menu mobile toggle
+        document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
 
-        .success-message {
-            background-color: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            color: #6ee7b7;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            font-size: 0.875rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            justify-content: center;
-        }
-
-        .error-message {
-            background-color: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            color: #fca5a5;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            font-size: 0.875rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            justify-content: center;
-        }
-
-        .fa-spin {
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-
-    <script>
-        // Simple slider (optionnel)
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.hero-slide');
-        if (slides.length > 0) {
-            function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
-                currentSlide = index;
-                if (currentSlide >= slides.length) currentSlide = 0;
-                if (currentSlide < 0) currentSlide = slides.length - 1;
-                slides[currentSlide].classList.add('active');
-            }
-            // setInterval(() => showSlide(currentSlide + 1), 5000);
-        }
+        // Fermer le menu mobile quand on clique sur un lien
+        document.querySelectorAll('.mobile-nav-link, .mobile-nav-button').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenuToggle').classList.remove('active');
+                document.getElementById('mobileMenu').classList.remove('active');
+            });
+        });
     </script>
 
 </body>
